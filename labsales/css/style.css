@@ -1,5 +1,29 @@
 @charset "UTF-8";
 
+@font-face {
+  font-family: "Magistral Bold";
+  font-display: swap;
+  src: url("../fonts/Magistral Bold.woff") format("woff"), url("../fonts/Magistral Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Magistral Black";
+  font-display: swap;
+  src: url("../fonts/Magistral Black.woff") format("woff"), url("../fonts/Magistral Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Magistral";
+  font-display: swap;
+  src: url("../fonts/Magistral.woff") format("woff"), url("../fonts/Magistral.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
 * {
   padding: 0px;
   margin: 0px;
@@ -92,8 +116,10 @@ h6 {
 }
 
 body {
+  font-family: 'Magistral', sans-serif;
+  font-size: calc(14px + 2 * ((100vw - 320px) / 1600));
+  font-weight: 400;
   color: #000;
-  font-size: 14px;
 }
 
 body._lock {
@@ -114,7 +140,7 @@ body._lock {
 }
 
 ._container {
-  max-width: 1170px;
+  max-width: 1130px;
   margin: 0 auto;
 }
 
@@ -259,7 +285,7 @@ textarea.input {
 }
 
 .checkbox__input:checked + .checkbox__text:before {
-  background: #fff url("../img/icons/check.svg") center no-repeat;
+  background: #fff url("../../img/icons/check.svg") center no-repeat;
 }
 
 .checkbox__text {
@@ -659,7 +685,7 @@ body.ie ._ibg img {
 }
 
 #map {
-  background: url("../img/icons/loading.gif") center/50px no-repeat;
+  background: url("../../img/icons/loading.gif") center/50px no-repeat;
 }
 
 ._swiper {
@@ -847,7 +873,7 @@ body.ie ._ibg img {
   right: 0px;
   cursor: pointer;
   z-index: 30;
-  background: url("../img/icons/close.svg") 0 0 no-repeat;
+  background: url("../../img/icons/close.svg") 0 0 no-repeat;
 }
 
 /*
@@ -919,7 +945,7 @@ body.ie ._ibg img {
   }
 }
 
-@media (max-width: 1182px) {
+@media (max-width: 1142px) {
   ._container {
     max-width: 970px;
   }

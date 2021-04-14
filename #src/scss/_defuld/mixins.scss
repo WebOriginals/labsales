@@ -50,3 +50,64 @@
 		#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
 	}
 }
+
+//ВНЕШНИЙ ОТСТУП СНИЗУ
+@mixin adaptiv-margin-bottom($pcSize, $mobSize) {
+	$addSize: $pcSize - $mobSize;
+	$maxWidth: $maxWidth - 320;
+	margin-bottom: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+
+
+//*МЕДИА ЗАПРОС
+$breakpoints: (
+				"phone":        320px,
+				"phone-midle":  370px,
+				"phone-wide":   480px,
+				"phablet":      560px,
+				"tablet-small": 640px,
+				"tablet":       768px,
+				"tablet-990":   990px,
+				"tablet-wide":  1024px,
+				"desktop":      1200px,
+				"desktop1350":  1350px,
+				"desktop-wide": 1440px,
+				"2K":           1800px,
+				"2.5K":         2500px,
+				"3K":           3000px
+);
+@mixin mq($width, $type: min) {
+	@if map_has_key($breakpoints, $width) {
+		$width: map_get($breakpoints, $width);
+		@if $type == max {
+			$width: $width - 1px;
+		}
+		@media only screen and (#{$type}-width: $width) {
+			@content;
+		}
+	}
+}
+@mixin maq($width, $type: max) {
+	@if map_has_key($breakpoints, $width) {
+		$width: map_get($breakpoints, $width);
+		@if $type == max {
+			$width: $width - 1px;
+		}
+		@media only screen and (#{$type}-width: $width) {
+			@content;
+		}
+	}
+}
+//пример
+//.site-header { @include mq('tablet-wide') {padding-top: 4rem;font-size: 2.4rem;} }
+//* конец
+
+
+//*РАЗМЕР ШРИФТА
+$maxWidth: 1920;
+
+@mixin adaptiv-font($pcSize, $mobSize) {
+	$addSize: $pcSize - $mobSize;
+	$maxWidth: $maxWidth - 320;
+	font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}

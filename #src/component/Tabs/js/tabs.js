@@ -1,4 +1,4 @@
-if ($('.tabs').length) {
+if ($('.tabs').length > 0) {
     let tab = function () {
         let AllBodyTabs = document.querySelectorAll('.tabs');
 

@@ -15,4 +15,6 @@ $( document ).ready(function() {
     @@include('files/sliders/pageMain-firstScreen.js')
     // end sliders
 
-}
+    @@include('files/menu.js')
+
+})

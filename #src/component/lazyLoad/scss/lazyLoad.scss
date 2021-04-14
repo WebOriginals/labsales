@@ -3,11 +3,6 @@
   height: 50px;
 }
 
-.page__images {
-  display: grid;
-  gap: 10px;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-}
 
 .page__image {
   position: relative;
@@ -22,8 +17,6 @@
   left: 0;
   object-fit: cover;
 }
-
-
 
 
 .page__map {

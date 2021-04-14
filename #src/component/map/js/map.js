@@ -1,6 +1,4 @@
-if ($('#map').length) {
-
-
+if ($('#map').length > 0) {
     var myMap;
 
     ymaps.ready(init);

@@ -1,4 +1,4 @@
-if( $( '.card-info__quantity' ).length ) {
+if( $( '.card-info__quantity' ).length > 0) {
     function countFunc(count) {
         var btnPlus = count.querySelector('.card-info__plus');
         var btnMinus = count.querySelector('.card-info__minus');

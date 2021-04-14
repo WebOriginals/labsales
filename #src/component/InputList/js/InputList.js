@@ -1,4 +1,4 @@
-if( $( '.catalog-sort' ).length ) {
+if( $( '.catalog-sort' ).length > 0) {
     if (window.screen.width <= 1240) {
         $('.catalog-sort').html("ценa ↑");
     }

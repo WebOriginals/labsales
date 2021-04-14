@@ -1,4 +1,4 @@
-if( $( '.dropDownList-title' ).length ) {
+if( $( '.dropDownList-title' ).length > 0) {
     $(".dropDownList-title").click(function () {
         var elem = this;
         var block = $(elem).closest('.wrapper-dropDownList');

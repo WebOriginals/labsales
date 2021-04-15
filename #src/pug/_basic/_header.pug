@@ -1,25 +1,34 @@
 header.header
-    .header__content._container
-        .header__menu.menu
-            .menu__icon
-                span
-            nav.menu__body
-                ul.menu__list
-                    li
-                        a.menu__link(data-goto='.page__section_1' href='#') &Rcy;&acy;&zcy;&dcy;&iecy;&lcy; &numero;1
-                    li
-                        a.menu__link(data-goto='.page__section_2' href='#') &Rcy;&acy;&zcy;&dcy;&iecy;&lcy; &numero;2
-                    li
-                        a.menu__link(data-goto='.page__section_3' href='#') &Rcy;&acy;&zcy;&dcy;&iecy;&lcy; &numero;3
-                    li
-                        a.menu__link(href='') &Scy;&tcy;&rcy;&acy;&ncy;&icy;&tscy;&acy; &numero;1
-                        span.menu__arrow
-                        ul.menu__sub-list
-                            li
-                                a.menu__sub-link(href='') &Rcy;&acy;&zcy;&dcy;&iecy;&lcy; &scy;&tcy;&rcy;&acy;&ncy;&icy;&tscy;&ycy; &numero;1
-                            li
-                                a.menu__sub-link(href='') &Rcy;&acy;&zcy;&dcy;&iecy;&lcy; &scy;&tcy;&rcy;&acy;&ncy;&icy;&tscy;&ycy; &numero;2
-                            li
-                                a.menu__sub-link(href='') &Rcy;&acy;&zcy;&dcy;&iecy;&lcy; &scy;&tcy;&rcy;&acy;&ncy;&icy;&tscy;&ycy; &numero;3
-                    li
-                        a.menu__link(href='') &Scy;&tcy;&rcy;&acy;&ncy;&icy;&tscy;&acy; &numero;2
+    .header__container._container
+        .body-header
+            a.header__logo(href="/")
+                img(src='img/icons/logo.svg' alt='logo')
+            .header__menu.menu
+                .menu__icon
+                    span
+                nav.menu__body
+                    ul.menu__list
+                        li
+                            a.menu__link(data-goto='.page__section_1' href='#') о компании
+                        li
+                            a.menu__link(href='') услуги
+                            span.menu__arrow
+                                img(src='img/icons/menu-arrow_down.svg' alt='arrow')
+                            ul.menu__sub-list
+                                li
+                                    a.menu__sub-link(href='') &Rcy;&acy;&zcy;&dcy;&iecy;&lcy; &scy;&tcy;&rcy;&acy;&ncy;&icy;&tscy;&ycy; &numero;1
+                                li
+                                    a.menu__sub-link(href='') &Rcy;&acy;&zcy;&dcy;&iecy;&lcy; &scy;&tcy;&rcy;&acy;&ncy;&icy;&tscy;&ycy; &numero;2
+                                li
+                                    a.menu__sub-link(href='') &Rcy;&acy;&zcy;&dcy;&iecy;&lcy; &scy;&tcy;&rcy;&acy;&ncy;&icy;&tscy;&ycy; &numero;3
+
+                        li
+                            a.menu__link(data-goto='.page__section_2' href='#') кейсы
+                        li
+                            a.menu__link(data-goto='.page__section_3' href='#') карьера
+                        li
+                            a.menu__link(href='') контакты
+            .header__phone.header-phone
+                a.header-phone__link(href="tel:+79002477500") +7(900)247-75-00
+            .header__mail.header-mail
+                a.header-mail__link(href="mailto:hi@labsales.ru") hi@labsales.ru

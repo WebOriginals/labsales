@@ -1,5 +1,5 @@
-$( document ).ready(function() {
 
+$( document ).ready(function() {
     //component
     @@include('../component/Modals/js/modal.js')
     @@include('../component/Tabs/js/tabs.js')
@@ -16,5 +16,6 @@ $( document ).ready(function() {
     // end sliders
 
     @@include('files/menu.js')
+    @@include('files/animation.js')
 
 })

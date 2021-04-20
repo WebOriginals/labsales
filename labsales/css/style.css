@@ -1510,6 +1510,7 @@ body._touch .menu__arrow {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  cursor: pointer;
 }
 
 .portfolio-slide {

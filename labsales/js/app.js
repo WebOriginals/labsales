@@ -606,33 +606,34 @@ async function getContent() {
     });
 
 }
-if(window.screen.width <=767) {
-    var node = document.querySelector('.js--video');
-    node.parentNode.removeChild(node);
-
-    var properties = {
-        'remove': {
-            enumerable: false,
-            writable: false,
-            value: function () {
-                if (!this.parentNode) {
-                    throw "Parent node not exists";
-                }
-
-                this.parentNode.removeChild(this);
-                return this;
-            }
-        }
-    };
-    Object.defineProperties(Node.prototype, properties);
-
-// Метод можно вызвать только после загрузки всего DOM-дерева
-    document.addEventListener('DOMContentLoaded', function () {
-        document.querySelector('.js--video').remove();
-    });
-}
 
 
+
+
+    var galleryThumbs = new Swiper('.description-container', {
+    spaceBetween: 10,
+    effect: 'fade',
+    lazy: true,
+    autoHeight: true,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+});
+var galleryTop = new Swiper('.main-container', {
+    spaceBetween: 10,
+    slidesPerView: 1,
+    direction: 'vertical',
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    thumbs: {
+        swiper: galleryThumbs
+    },
+    pagination: {
+        el: '.main-pagination',
+        clickable: true,
+    },
+});
     // end sliders
 
     "use strict"
@@ -737,5 +738,30 @@ if (menuLinks.length > 0) {
 
 
 
+    if(window.screen.width <=767) {
+    var node = document.querySelector('.js--video');
+    node.parentNode.removeChild(node);
+
+    var properties = {
+        'remove': {
+            enumerable: false,
+            writable: false,
+            value: function () {
+                if (!this.parentNode) {
+                    throw "Parent node not exists";
+                }
+
+                this.parentNode.removeChild(this);
+                return this;
+            }
+        }
+    };
+    Object.defineProperties(Node.prototype, properties);
+
+// Метод можно вызвать только после загрузки всего DOM-дерева
+    document.addEventListener('DOMContentLoaded', function () {
+        document.querySelector('.js--video').remove();
+    });
+}
 
 })

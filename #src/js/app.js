@@ -14,9 +14,11 @@ $( document ).ready(function() {
     // sliders
     @@include('files/sliders/pageMain-firstScreen.js')
     @@include('files/sliders/pageMain-portfolio.js')
+    @@include('files/sliders/pageMain-we-this.js')
     // end sliders
 
     @@include('files/menu.js')
     @@include('files/animation.js')
+    @@include('files/delete-video.js')
 
 })

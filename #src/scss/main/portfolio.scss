@@ -1,0 +1,100 @@
+.arrow-portfolio{
+  &:hover{
+    circle{
+      fill:$color_1;
+    }
+    path{
+      stroke: $color_3;
+    }
+  }
+}
+.arrows{
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  z-index: 2;
+  align-items: center;
+  padding: 0 15px;
+  @include mq('desktop-wide') {
+    bottom: 130px;
+    padding: 0 0;
+  }
+}
+
+.position{
+  position: relative;
+}
+
+.portfolio-slide{
+  display: flex;
+}
+
+.portfolio-slide{
+  height: 40vh;
+
+
+  .portfolio-slide__image{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  @include mq('desktop') {
+    height: 90vh;
+  }
+}
+
+.portfolio-slide__tipe-site{
+  @include adaptiv-font(36,20);
+  color: $color_1;
+  font-weight: 900;
+  padding-top: 10%;
+}
+
+.portfolio-slide__text-bottom{
+  z-index: 2;
+  color: $color_1;
+  margin-right: auto;
+
+  .portfolio-slide__name-project{
+    @include adaptiv-font(24,14);
+  }
+  .portfolio-slide__description{
+    @include adaptiv-font(32,16);
+    font-weight: 900;
+  }
+}
+
+.portfolio-button-prev{
+  margin-right: 5%;
+}
+
+.wrapper-more{
+  @include maq('tablet') {
+   display: none;
+  }
+  transform: translateY(-40px);
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+  &:hover{
+    .wrapper-more__hover{
+      opacity: 1;
+
+    }
+  }
+  .wrapper-more__default{
+    position: absolute;
+  }
+  .wrapper-more__hover{
+    position: absolute;
+    transition: .4s;
+    opacity: 0;
+  }
+}

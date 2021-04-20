@@ -38,7 +38,8 @@ $animDuration: 5s;
   background-size: 100% 200%;
   animation:
           colorSlide $animDuration linear infinite,
-          nudgeMouse $animDuration ease-out infinite;
+          nudgeMouse $animDuration ease-out infinite,
+          slider;
   &:before,
   &:after {
     content: "";
@@ -62,12 +63,7 @@ $animDuration: 5s;
   }
   opacity: 0;
 
-  animation: slider ; // name
-  animation-duration: 3s; // продолжительность анимации
-  animation-timing-function: linear; //как будет проходить анимация
-  animation-iteration-count: 1; // число повторов анимации
-  animation-direction: normal;//тип и направление проигрывания ключевых кадров
-  animation-delay: 7s;
+
   @include maq('tablet') {
     display: none;
   }

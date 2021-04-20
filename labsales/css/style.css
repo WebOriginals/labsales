@@ -670,10 +670,10 @@ body._pc .header-mail__link:hover {
 .menu__sub-list {
   position: absolute;
   top: 100%;
-  right: 0;
+  left: 0;
   background-color: #FFFFFF;
-  padding: 15px;
-  min-width: 200px;
+  padding: 15px 0;
+  min-width: 250px;
 }
 
 .menu__sub-list li {
@@ -930,6 +930,14 @@ body._touch .menu__arrow {
   max-width: 100%;
 }
 
+.body-first-screen-video .wrapper-video picture {
+  display: none;
+}
+
+.body-first-screen-video .wrapper-video picture img {
+  max-width: 100%;
+}
+
 .body-first-screen-video .logo-maska {
   z-index: 2;
   position: relative;
@@ -946,21 +954,9 @@ body._touch .menu__arrow {
   height: 58px;
   border-radius: 100px;
   background-size: 100% 200%;
-  -webkit-animation: colorSlide 5s linear infinite, nudgeMouse 5s ease-out infinite;
-          animation: colorSlide 5s linear infinite, nudgeMouse 5s ease-out infinite;
+  -webkit-animation: colorSlide 5s linear infinite, nudgeMouse 5s ease-out infinite, slider;
+          animation: colorSlide 5s linear infinite, nudgeMouse 5s ease-out infinite, slider;
   opacity: 0;
-  -webkit-animation: slider;
-          animation: slider;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-delay: 7s;
-          animation-delay: 7s;
 }
 
 .mouse:before,
@@ -1483,6 +1479,109 @@ body._touch .menu__arrow {
   }
 }
 
+.arrow-portfolio:hover circle {
+  fill: #FFFFFF;
+}
+
+.arrow-portfolio:hover path {
+  stroke: #E53935;
+}
+
+.arrows {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 2;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 15px;
+}
+
+.position {
+  position: relative;
+}
+
+.portfolio-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.portfolio-slide {
+  height: 40vh;
+}
+
+.portfolio-slide .portfolio-slide__image {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.portfolio-slide__tipe-site {
+  font-size: calc(20px + 16 * ((100vw - 320px) / 1600));
+  color: #FFFFFF;
+  font-weight: 900;
+  padding-top: 10%;
+}
+
+.portfolio-slide__text-bottom {
+  z-index: 2;
+  color: #FFFFFF;
+  margin-right: auto;
+}
+
+.portfolio-slide__text-bottom .portfolio-slide__name-project {
+  font-size: calc(14px + 10 * ((100vw - 320px) / 1600));
+}
+
+.portfolio-slide__text-bottom .portfolio-slide__description {
+  font-size: calc(16px + 16 * ((100vw - 320px) / 1600));
+  font-weight: 900;
+}
+
+.portfolio-button-prev {
+  margin-right: 5%;
+}
+
+.wrapper-more {
+  -webkit-transform: translateY(-40px);
+      -ms-transform: translateY(-40px);
+          transform: translateY(-40px);
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  cursor: pointer;
+}
+
+.wrapper-more:hover .wrapper-more__hover {
+  opacity: 1;
+}
+
+.wrapper-more .wrapper-more__default {
+  position: absolute;
+}
+
+.wrapper-more .wrapper-more__hover {
+  position: absolute;
+  -webkit-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s;
+  opacity: 0;
+}
+
 @media only screen and (min-width: 768px) {
   .dropDownList-title {
     width: -webkit-fit-content;
@@ -1671,11 +1770,20 @@ body._touch .menu__arrow {
   .socials__el:hover path {
     fill: #333;
   }
+
+  .portfolio-slide {
+    height: 90vh;
+  }
 }
 
 @media only screen and (min-width: 1440px) {
   .card-info__number {
     font-size: 18px;
+  }
+
+  .arrows {
+    bottom: 130px;
+    padding: 0 0;
   }
 }
 
@@ -1859,7 +1967,23 @@ body._touch .menu__arrow {
     width: 100%;
   }
 
+  .body-first-screen-video .wrapper-video {
+    top: 0;
+  }
+
+  .body-first-screen-video .wrapper-video video {
+    display: none;
+  }
+
+  .body-first-screen-video .wrapper-video picture {
+    display: block;
+  }
+
   .mouse {
+    display: none;
+  }
+
+  .wrapper-more {
     display: none;
   }
 }

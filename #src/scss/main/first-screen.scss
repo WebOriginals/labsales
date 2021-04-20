@@ -128,8 +128,24 @@
     left: 0;
     z-index: 1;
     display: block;
+    @include maq('tablet') {
+      top: 0;
+    }
     video{
       max-width: 100%;
+      @include maq('tablet') {
+        display: none;
+      }
+    }
+    picture{
+
+      img{
+        max-width: 100%;
+      }
+      display: none;
+      @include maq('tablet') {
+        display: block;
+      }
     }
   }
   .logo-maska{

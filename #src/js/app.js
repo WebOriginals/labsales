@@ -13,6 +13,7 @@ $( document ).ready(function() {
 
     // sliders
     @@include('files/sliders/pageMain-firstScreen.js')
+    @@include('files/sliders/pageMain-portfolio.js')
     // end sliders
 
     @@include('files/menu.js')

@@ -53,7 +53,7 @@
 .portfolio-slide__tipe-site{
   @include adaptiv-font(36,20);
   color: $color_1;
-  font-weight: 900;
+  font-weight: bold;
   padding-top: 10%;
 }
 
@@ -64,10 +64,11 @@
 
   .portfolio-slide__name-project{
     @include adaptiv-font(24,14);
+    font-weight: 300;
   }
   .portfolio-slide__description{
     @include adaptiv-font(32,16);
-    font-weight: 900;
+    font-weight: bold;
   }
 }
 

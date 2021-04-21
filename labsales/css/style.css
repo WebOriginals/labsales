@@ -1,25 +1,81 @@
 @font-face {
-  font-family: "Magistral Bold";
-  font-display: swap;
-  src: url("../fonts/Magistral Bold.woff") format("woff"), url("../fonts/Magistral Bold.woff2") format("woff2");
-  font-weight: 700;
+  font-family: 'Magistral Extra';
+  src: url("./../fonts/Magistral-ExtraBoldItalic.woff2") format("woff2");
+  src: local("Magistral Extra Bold Italic"), local("Magistral-ExtraBoldItalic"), url("./../fonts/Magistral-ExtraBoldItalic.woff") format("woff");
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Magistral';
+  src: url("./../fonts/Magistral-LightItalic.woff2") format("woff2");
+  src: local("Magistral Light Italic"), local("Magistral-LightItalic"), url("./../fonts/Magistral-LightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Magistral Extra';
+  src: url("./../fonts/Magistral-ExtraBold.woff2") format("woff2");
+  src: local("Magistral Extra Bold"), local("Magistral-ExtraBold"), url("./../fonts/Magistral-ExtraBold.woff") format("woff");
+  font-weight: 800;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Magistral Black";
-  font-display: swap;
-  src: url("../fonts/Magistral Black.woff") format("woff"), url("../fonts/Magistral Black.woff2") format("woff2");
-  font-weight: 900;
+  font-family: 'Magistral';
+  src: url("./../fonts/Magistral-Medium.woff2") format("woff2");
+  src: local("Magistral Medium"), local("Magistral-Medium"), url("./../fonts/Magistral-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Magistral";
-  font-display: swap;
-  src: url("../fonts/Magistral.woff") format("woff"), url("../fonts/Magistral.woff2") format("woff2");
-  font-weight: 400;
+  font-family: 'Magistral Book';
+  src: url("./../fonts/Magistral-BookItalic.woff2") format("woff2");
+  src: local("Magistral Book Italic"), local("Magistral-BookItalic"), url("./../fonts/Magistral-BookItalic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Magistral Book';
+  src: url("./../fonts/Magistral-Book.woff2") format("woff2");
+  src: local("Magistral Book"), local("Magistral-Book"), url("./../fonts/Magistral-Book.woff") format("woff");
+  font-weight: normal;
   font-style: normal;
+}
+
+@font-face {
+  font-family: 'Magistral';
+  src: url("./../fonts/Magistral-Bold.woff2") format("woff2");
+  src: local("Magistral Bold"), local("Magistral-Bold"), url("./../fonts/Magistral-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Magistral';
+  src: url("./../fonts/Magistral-Light.woff2") format("woff2");
+  src: local("Magistral Light"), local("Magistral-Light"), url("./../fonts/Magistral-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Magistral';
+  src: url("./../fonts/Magistral-MediumItalic.woff2") format("woff2");
+  src: local("Magistral Medium Italic"), local("Magistral-MediumItalic"), url("./../fonts/Magistral-MediumItalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Magistral';
+  src: url("./../fonts/Magistral-BoldItalic.woff2") format("woff2");
+  src: local("Magistral Bold Italic"), local("Magistral-BoldItalic"), url("./../fonts/Magistral-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
 }
 
 * {
@@ -61,7 +117,7 @@ body {
 
 body {
   line-height: 1.2;
-  font-family: "Magistral", sans-serif;
+  font-family: "Magistral";
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -70,7 +126,7 @@ body {
 input,
 button,
 textarea {
-  font-family: "Magistral", sans-serif;
+  font-family: "Magistral";
 }
 
 input::-ms-clear {
@@ -114,8 +170,8 @@ h6 {
 }
 
 body {
-  font-size: calc(14px + 2 * ((100vw - 320px) / 1600));
-  font-weight: 400;
+  font-size: calc(14px + 2 * ((100vw - 320px) / 2880));
+  font-weight: 300;
   color: #000;
 }
 
@@ -148,12 +204,12 @@ body._lock {
 }
 
 .title {
-  font-size: calc(24px + 12 * ((100vw - 320px) / 1600));
+  font-size: calc(24px + 12 * ((100vw - 320px) / 2880));
   font-weight: 400;
 }
 
 .title-h3 {
-  font-size: calc(18px + 2 * ((100vw - 320px) / 1600));
+  font-size: calc(18px + 2 * ((100vw - 320px) / 2880));
   font-weight: 600;
 }
 
@@ -169,9 +225,10 @@ body._lock {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  font-size: calc(14px + 2 * ((100vw - 320px) / 1600));
-  font-weight: 400;
+  font-size: calc(14px + 2 * ((100vw - 320px) / 2880));
+  font-weight: 300;
   border: 1px solid #E53935;
+  text-transform: uppercase;
 }
 
 .button:hover {
@@ -247,7 +304,7 @@ body._lock {
   -moz-appearance: none;
   appearance: none;
   padding: 0 10px;
-  font-size: calc(14px + 2 * ((100vw - 320px) / 1600));
+  font-size: calc(14px + 2 * ((100vw - 320px) / 2880));
 }
 
 .choice-of-size:active,
@@ -300,7 +357,7 @@ body._lock {
 .list__itams {
   cursor: pointer;
   padding: .3rem;
-  font-size: calc(14px + 2 * ((100vw - 320px) / 1600));
+  font-size: calc(14px + 2 * ((100vw - 320px) / 2880));
   color: #333;
 }
 
@@ -488,18 +545,18 @@ body.lock {
 }
 
 .popup__title {
-  font-size: calc(26px + 10 * ((100vw - 320px) / 1600));
+  font-size: calc(26px + 10 * ((100vw - 320px) / 2880));
   font-weight: bold;
-  margin-bottom: calc(30px + 10 * ((100vw - 320px) / 1600));
+  margin-bottom: calc(30px + 10 * ((100vw - 320px) / 2880));
 }
 
 .type-service {
-  margin-bottom: calc(30px + 10 * ((100vw - 320px) / 1600));
+  margin-bottom: calc(30px + 10 * ((100vw - 320px) / 2880));
 }
 
 .titleform {
-  font-size: calc(18px + 2 * ((100vw - 320px) / 1600));
-  font-weight: bold;
+  font-size: calc(18px + 2 * ((100vw - 320px) / 2880));
+  font-weight: 500;
   margin-bottom: 15px;
 }
 
@@ -519,12 +576,16 @@ body.lock {
   cursor: pointer;
 }
 
+.type-service__el .type-service__label:hover {
+  color: #E53935;
+}
+
 .type-service__el .type-service__input:checked + .type-service__label {
   color: #E53935;
 }
 
 .budget {
-  margin-bottom: calc(30px + 10 * ((100vw - 320px) / 1600));
+  margin-bottom: calc(30px + 10 * ((100vw - 320px) / 2880));
 }
 
 .user-data {
@@ -533,7 +594,7 @@ body.lock {
   grid-gap: 30px;
   -ms-grid-columns: 1fr;
   grid-template-columns: 1fr;
-  margin-bottom: calc(30px + 10 * ((100vw - 320px) / 1600));
+  margin-bottom: calc(30px + 10 * ((100vw - 320px) / 2880));
 }
 
 .header {
@@ -571,7 +632,7 @@ body.lock {
 
 .header-phone__link {
   color: #333;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .header-mail__link {
@@ -587,6 +648,95 @@ body._pc .header-mail__link:hover {
   text-decoration: none;
 }
 
+footer {
+  padding: 50px 0;
+}
+
+.body-footer {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 20px;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+}
+
+.body-footer a {
+  color: #333;
+}
+
+.body-footer a:hover {
+  color: #E53935;
+}
+
+.footer-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer__logo {
+  display: block;
+  margin-bottom: 45px;
+}
+
+.footer__phone {
+  margin-bottom: 15px;
+}
+
+.footer__address {
+  margin-bottom: 15px;
+}
+
+.footer__mail {
+  color: #E53935 !important;
+  text-decoration: underline;
+}
+
+.footer__link-main {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.footer__link-second {
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+
+.footer__soc.footer-soc {
+  margin-bottom: 30px;
+}
+
+.footer__soc.footer-soc .footer-soc__title {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.footer__agima {
+  margin-bottom: 30px;
+}
+
+.footer-soc__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer-soc__links .footer-soc__link {
+  margin-right: 15px;
+}
+
 .menu__icon {
   display: none;
 }
@@ -598,8 +748,8 @@ body._pc .header-mail__link:hover {
 
 .menu__link {
   color: #333;
-  font-size: calc(18px + -2 * ((100vw - 320px) / 1600));
-  font-weight: 700;
+  font-size: calc(18px + -2 * ((100vw - 320px) / 2880));
+  font-weight: 500;
 }
 
 .menu__sub-list {
@@ -746,7 +896,7 @@ body._touch .menu__arrow {
   padding: 0 1em;
   width: 40%;
   color: #333;
-  font-weight: bold;
+  font-weight: 300;
   font-size: 70.25%;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -773,7 +923,7 @@ body._touch .menu__arrow {
   background: transparent;
   color: #333;
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .input__label--hoshi {
@@ -917,8 +1067,8 @@ body._touch .menu__arrow {
 }
 
 .firstScreen-slide h2 {
-  font-size: calc(30px + 18 * ((100vw - 320px) / 1600));
-  font-weight: 700;
+  font-size: calc(30px + 18 * ((100vw - 320px) / 2880));
+  font-weight: 500;
 }
 
 .firstScreen-slide span {
@@ -1618,9 +1768,9 @@ body._touch .menu__arrow {
 }
 
 .portfolio-slide__tipe-site {
-  font-size: calc(20px + 16 * ((100vw - 320px) / 1600));
+  font-size: calc(20px + 16 * ((100vw - 320px) / 2880));
   color: #FFFFFF;
-  font-weight: 900;
+  font-weight: bold;
   padding-top: 10%;
 }
 
@@ -1631,12 +1781,13 @@ body._touch .menu__arrow {
 }
 
 .portfolio-slide__text-bottom .portfolio-slide__name-project {
-  font-size: calc(14px + 10 * ((100vw - 320px) / 1600));
+  font-size: calc(14px + 10 * ((100vw - 320px) / 2880));
+  font-weight: 300;
 }
 
 .portfolio-slide__text-bottom .portfolio-slide__description {
-  font-size: calc(16px + 16 * ((100vw - 320px) / 1600));
-  font-weight: 900;
+  font-size: calc(16px + 16 * ((100vw - 320px) / 2880));
+  font-weight: bold;
 }
 
 .portfolio-button-prev {
@@ -1712,24 +1863,24 @@ body._touch .menu__arrow {
 }
 
 .description-slide__text h2 {
-  font-size: calc(18px + 6 * ((100vw - 320px) / 1600));
-  margin-bottom: calc(15px + 10 * ((100vw - 320px) / 1600));
-  font-weight: 700;
+  font-size: calc(18px + 6 * ((100vw - 320px) / 2880));
+  margin-bottom: calc(15px + 10 * ((100vw - 320px) / 2880));
+  font-weight: 500;
 }
 
 .description-slide__text p {
-  font-size: calc(16px + 2 * ((100vw - 320px) / 1600));
+  font-size: calc(16px + 2 * ((100vw - 320px) / 2880));
 }
 
 .main-slide {
-  font-size: calc(36px + 4 * ((100vw - 320px) / 1600));
-  font-weight: 900;
+  font-size: calc(36px + 4 * ((100vw - 320px) / 2880));
+  font-weight: bold;
   color: #E53935;
 }
 
 .title-we-this {
-  font-size: calc(36px + 4 * ((100vw - 320px) / 1600));
-  font-weight: 900;
+  font-size: calc(36px + 4 * ((100vw - 320px) / 2880));
+  font-weight: bold;
 }
 
 .main-pagination {
@@ -1766,19 +1917,18 @@ body._touch .menu__arrow {
 
 .modal-presentation__el p {
   text-align: center;
-  font-size: calc(33px + 15 * ((100vw - 320px) / 1600));
+  font-size: calc(33px + 15 * ((100vw - 320px) / 2880));
   font-weight: bold;
 }
 
 .modal-presentation__el p a {
   color: #333;
-  padding-bottom: 5px;
-  border-bottom: 2px solid #333;
+  border-bottom: 3px solid #333;
 }
 
 .modal-presentation__el p a:hover {
   color: #E53935;
-  border-bottom: 2px solid #E53935;
+  border-bottom: 3px solid #E53935;
 }
 
 .line:after {
@@ -1787,7 +1937,7 @@ body._touch .menu__arrow {
   top: 50%;
   left: 0;
   width: 100%;
-  height: 2px;
+  height: 3px;
   background: #E53935;
 }
 
@@ -1809,6 +1959,11 @@ body._touch .menu__arrow {
     grid-gap: 20px 60px;
     -ms-grid-columns: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .body-footer {
+    -ms-grid-columns: 1fr  1fr;
+    grid-template-columns: 1fr  1fr;
   }
 
   .body-first-screen-sl {
@@ -1925,7 +2080,7 @@ body._touch .menu__arrow {
   .line:after {
     top: 0;
     left: 50%;
-    width: 2px;
+    width: 3px;
     height: 100%;
   }
 }
@@ -1973,6 +2128,15 @@ body._touch .menu__arrow {
   .body-header {
     -ms-grid-columns: 100px 1fr auto auto;
     grid-template-columns: 100px 1fr auto auto;
+  }
+
+  footer {
+    padding: 90px 0;
+  }
+
+  .body-footer {
+    -ms-grid-columns: 1fr  1fr 1fr 1fr;
+    grid-template-columns: 1fr  1fr 1fr 1fr;
   }
 
   .wrapper-pagination-arrows {

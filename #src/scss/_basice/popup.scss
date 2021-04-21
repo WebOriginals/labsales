@@ -10,7 +10,7 @@
 
 .titleform{
   @include adaptiv-font(20,18);
-  font-weight: bold;
+  font-weight: 500;
   margin-bottom: 15px;
 }
 
@@ -31,10 +31,14 @@
 
   .type-service__label{
     cursor: pointer;
+    &:hover{
+      color: $color_3;
+    }
   }
   .type-service__input:checked + .type-service__label{
     color: $color_3;
   }
+
 }
 
 .budget{

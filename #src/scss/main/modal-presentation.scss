@@ -26,11 +26,10 @@
 
     a{
       color: $color_2;
-      padding-bottom: 5px;
-      border-bottom: 2px solid $color_2;
+      border-bottom: 3px solid $color_2;
       &:hover{
         color: $color_3;
-        border-bottom: 2px solid $color_3;
+        border-bottom: 3px solid $color_3;
       }
     }
   }
@@ -43,12 +42,12 @@
     top: 50%;
     left: 0;
     width: 100%;
-    height: 2px;
+    height: 3px;
     background: $color_3;
     @include mq('tablet') {
       top: 0;
       left: 50%;
-      width: 2px;
+      width: 3px;
       height: 100%;
     }
   }

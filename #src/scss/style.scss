@@ -14,7 +14,7 @@
 //</Иконочные шрифты>==========================================================================================
 
 //<Шрифт по умолчанию>==========================================================================================
-$fontFamily: 'Magistral', sans-serif;
+$fontFamily: 'Magistral';
 //</Шрифт по умолчанию>==========================================================================================
 
 //</ШРИФТЫ>=======================================================================================================
@@ -31,7 +31,7 @@ $link-img: '';
 
 
 $minWidth: 320px;
-$maxWidth: 1920;
+$maxWidth: 3200;
 $maxWidthContainer: 1130;
 $md1: $maxWidthContainer + 20;
 $md2: 991.98;
@@ -43,7 +43,7 @@ $md4: 479.98;
 @import "_defuld/null";
 body {
 	@include adaptiv-font(16,14);
-	font-weight: 400;
+	font-weight: 300;
 	color: #000;
 	&._lock {
 		overflow: hidden;
@@ -127,9 +127,9 @@ body {
 	transition: .5s;
 	width: fit-content;
 	@include adaptiv-font(16,14);
-	font-weight: 400;
+	font-weight: 300;
 	border: 1px solid $color_3;
-	//font-family: ;
+	text-transform: uppercase;
 
 	&:hover{
 		background: $color_3;

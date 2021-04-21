@@ -60,7 +60,7 @@
   h2{
     @include adaptiv-font(24,18);
     @include adaptiv-margin-bottom(25,15);
-    font-weight: 700;
+    font-weight: 500;
   }
   p{
     @include adaptiv-font(18,16);
@@ -69,13 +69,13 @@
 
 .main-slide{
   @include adaptiv-font(40,36);
-  font-weight: 900;
+  font-weight: bold;
   color: $color_3;
 }
 
 .title-we-this{
   @include adaptiv-font(40,36);
-  font-weight: 900;
+  font-weight: bold;
 }
 
 .main-pagination{

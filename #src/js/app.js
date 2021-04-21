@@ -17,8 +17,10 @@ $( document ).ready(function() {
     @@include('files/sliders/pageMain-we-this.js')
     // end sliders
 
+
     @@include('files/menu.js')
     @@include('files/animation.js')
     @@include('files/delete-video.js')
+    @@include('files/animation-inputs.js')
 
 })

@@ -1,0 +1,55 @@
+.sec-modal-presentation{
+  padding: 45px 0 90px;
+  @include mq('tablet-wide') {
+    padding: 90px 0 110px;
+  }
+}
+
+.body-modal-presentation{
+  position: relative;
+  display: grid;
+  grid-gap: 130px;
+  grid-template-columns: 1fr;
+  @include mq('tablet') {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.modal-presentation__el{
+  @include mq('tablet') {
+    padding: 50px 0;
+  }
+  p{
+    text-align: center;
+    @include adaptiv-font(48,33);
+    font-weight: bold;
+
+    a{
+      color: $color_2;
+      padding-bottom: 5px;
+      border-bottom: 2px solid $color_2;
+      &:hover{
+        color: $color_3;
+        border-bottom: 2px solid $color_3;
+      }
+    }
+  }
+}
+
+.line{
+  &:after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: $color_3;
+    @include mq('tablet') {
+      top: 0;
+      left: 50%;
+      width: 2px;
+      height: 100%;
+    }
+  }
+}

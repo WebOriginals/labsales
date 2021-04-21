@@ -159,10 +159,12 @@ body {
 @import "_basice/header";
 @import "_basice/footer";
 @import "_basice/menu/menu";
+@import "_basice/animation-inputs";
 
 //main
 @import "main/first-screen";
 @import "main/animation-scroll";
 @import "main/portfolio";
 @import "main/we-this-sl";
+@import "main/modal-presentation";
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================

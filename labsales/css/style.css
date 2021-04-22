@@ -216,11 +216,6 @@ body._lock {
   text-transform: uppercase;
 }
 
-.title-h3 {
-  font-size: calc(18px + 2 * ((100vw - 320px) / 2880));
-  font-weight: 500;
-}
-
 .button {
   background: #FFFFFF;
   color: #333;
@@ -267,132 +262,6 @@ body._lock {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-bottom: 30px;
-}
-
-.tabs-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.tabs-nav__item {
-  cursor: pointer;
-  margin-right: 30px;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-}
-
-.tab-pane {
-  display: none;
-}
-
-.tab-pane.is-active {
-  display: block;
-}
-
-.wrapper-size {
-  position: relative;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-}
-
-.wrapper-input {
-  padding-right: 18px;
-}
-
-.choice-of-size {
-  cursor: pointer;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  border-radius: 3px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  padding: 0 10px;
-  font-size: calc(14px + 2 * ((100vw - 320px) / 2880));
-}
-
-.choice-of-size:active,
-.choice-of-size:focus {
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  outline: none;
-}
-
-.wrapper-input:before {
-  content: "";
-  position: absolute;
-  right: 2px;
-  top: 50%;
-  width: 15px;
-  height: 13px;
-  margin-top: -3.5px;
-  background-image: url("./../../../img/ic/saidbar-arrow-d.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-.transfotm .wrapper-input:before {
-  background-image: url("./../../../img/ic/saidbar-arrow-u.svg");
-}
-
-.wrapper-list {
-  position: absolute;
-  top: 45px;
-  left: 0;
-  padding: .8rem;
-  height: auto;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  z-index: 1000;
-  background: #FFFFFF;
-}
-
-.list__itams {
-  cursor: pointer;
-  padding: .3rem;
-  font-size: calc(14px + 2 * ((100vw - 320px) / 2880));
-  color: #333;
-}
-
-.js_size_selector {
-  display: none;
-}
-
-.open {
-  display: block;
-}
-
-.inp-desc {
-  display: none;
-}
-
-.wrapper-map {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-#map {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
 }
 
 body.lock {
@@ -481,40 +350,6 @@ body.lock {
   font-size: 20px;
   color: #000;
   text-decoration: none;
-}
-
-.card-info__quantity {
-  padding: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.card-info__minus {
-  padding: 5px 0;
-}
-
-.card-info__minus,
-.card-info__plus {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  height: auto;
-  cursor: pointer;
-}
-
-.card-info__minus img,
-.card-info__plus img {
-  display: block;
-}
-
-.card-info__number {
-  width: 25px;
-  margin: 0 5px;
-  text-align: center;
 }
 
 ._loading-icon {
@@ -2523,10 +2358,6 @@ body._touch .menu__arrow {
 }
 
 @media only screen and (min-width: 1024px) {
-  .wrapper-list {
-    right: 0;
-  }
-
   .body-header {
     -ms-grid-columns: 100px 1fr auto auto;
     grid-template-columns: 100px 1fr auto auto;
@@ -2607,14 +2438,6 @@ body._touch .menu__arrow {
     padding-top: 140px;
   }
 
-  .inp-desc {
-    display: block;
-  }
-
-  .inp-mobl {
-    display: none;
-  }
-
   .brif__content {
     width: 1100px;
     max-width: 1100px;
@@ -2660,10 +2483,6 @@ body._touch .menu__arrow {
 }
 
 @media only screen and (min-width: 1440px) {
-  .card-info__number {
-    font-size: 18px;
-  }
-
   .arrows {
     bottom: 130px;
     padding: 0 0;
@@ -2722,12 +2541,6 @@ body._touch .menu__arrow {
 @media (max-width: 1150px) {
   ._container {
     max-width: 970px;
-  }
-}
-
-@media only screen and (max-width: 1023px) {
-  .title-h3 {
-    text-align: center;
   }
 }
 

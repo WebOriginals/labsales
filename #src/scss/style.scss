@@ -86,8 +86,7 @@ body {
 //</ОСНОВНАЯ СЕТКА>===========================================================================================================
 
 //<ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
-//@import "_basice/forms";
-//@import "_basice/ui";
+
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
 
 
@@ -117,13 +116,7 @@ body {
 	text-transform: uppercase;
 }
 
-.title-h3{
-	@include adaptiv-font(20,18);
-	font-weight: 500;
-	@include maq('tablet-wide') {
-		text-align: center;
-	}
-}
+
 
 //-----------Кнопка основная------------------
 
@@ -151,19 +144,10 @@ body {
 //<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
 //component
 @import "../component/dropDownLlist/scss/dropDownLlist.scss";
-@import "../component/Tabs/scss/tabs.scss";
-@import "../component/InputList/scss/InpuList.scss";
-@import "../component/map/scss/map.scss";
 @import "../component/Modals/scss/modals.scss";
-@import "../component/Quantity/scss/quantity.scss";
 @import "../component/lazyLoad/scss/lazyLoad.scss";
 
 
-
-
-//@import "datepicker";
-//@import "lightgallery";
-//@import "pagging";
 @import "_basice/popup";
 @import "_basice/header";
 @import "_basice/footer";

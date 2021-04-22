@@ -1,4 +1,4 @@
-
+@@include('files/animationAll.js')
 $( document ).ready(function() {
     //component
     @@include('../component/Modals/js/modal.js')
@@ -20,7 +20,7 @@ $( document ).ready(function() {
 
     @@include('files/menu.js')
     @@include('files/header-fix.js')
-    @@include('files/animation.js')
+    @@include('files/animation-first-scrin.js')
     @@include('files/delete-video.js')
     @@include('files/animation-inputs.js')
 

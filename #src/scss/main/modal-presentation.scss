@@ -52,3 +52,18 @@
     }
   }
 }
+
+//animation
+.modal-presentation__el{
+  transition: all 0.8s ease 1s;
+  opacity: 0;
+  transform: translate(120%, 0px);
+  &.one{
+    transform: translate(-120%, 0px);
+  }
+
+  &._active{
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+}

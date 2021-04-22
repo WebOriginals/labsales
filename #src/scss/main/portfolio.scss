@@ -34,8 +34,6 @@
 }
 
 .portfolio-slide{
-  //height: 40vh;
-
 
   .portfolio-slide__image{
     display: block;
@@ -46,9 +44,7 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
-  //@include mq('desktop') {
-  //  height: 90vh;
-  //}
+
 }
 .height-content-sl{
   height: 40vh;
@@ -63,10 +59,10 @@
   color: $color_1;
   font-weight: bold;
   padding-top: 10%;
+
 }
 
 .portfolio-slide__text-bottom{
-
   color: $color_1;
   position: absolute;
   bottom: 50px;
@@ -74,12 +70,15 @@
   width: 50%;
   z-index: 12;
 
+
   @include mq('desktop-wide') {
     width: 80%;
     bottom: 130px;
     padding: 0 0;
     left: 100px;
   }
+
+
 
 
   .portfolio-slide__name-project{
@@ -118,5 +117,31 @@
     position: absolute;
     transition: .4s;
     opacity: 0;
+  }
+}
+
+//анимация у первого слайдера
+.portfolio-slide:first-child{
+
+  .portfolio-slide__tipe-site{
+    opacity: 0;
+    transform: translate(-120%, 0px);
+    transition: all .8s ease 1s;
+    &._active{
+      opacity: 1;
+      transform: translate(0px,0px);
+    }
+  }
+
+
+  .portfolio-slide__text-bottom {
+    opacity: 0;
+    transform: translate(0px, -120%);
+    transition: all .8s ease 1s;
+
+    &._active {
+      opacity: 1;
+      transform: translate(0px, 0px);
+    }
   }
 }

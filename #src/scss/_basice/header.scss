@@ -63,4 +63,52 @@ body._pc{
   }
 }
 
+.stickytop {
+  .body-header{
+    height: 60px;
+  }
+}
 
+.menu-mobile{
+  display: grid;
+  grid-gap: 15px 5px;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 50px;
+
+  @include mq('tablet-990') {
+    display: none;
+  }
+
+  .header-phone,.header-mail{
+    display: block;
+    @include mq('tablet-990') {
+      display: none;
+    }
+  }
+
+  .menu-mobile__text-gray{
+    color: $color_5;
+    font-weight: 500;
+    &.up{
+      text-transform: uppercase;
+    }
+  }
+
+  .download-presentation{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    grid-column: span 2;
+    height: 25px;
+    padding-left: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    @if ($link-img == '') {
+      background-image: url("./../../img/icons/pdf.svg");
+    } @else {
+      background-image: url($link-img + "/img/icons/pdf.svg");
+    }
+    background-repeat: no-repeat;
+    background-position: top left;
+  }
+}

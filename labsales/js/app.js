@@ -721,6 +721,15 @@ if (menuLinks.length > 0) {
         }
     }
 }
+    $(function () {
+    $(window).scroll(function () {
+        if ($(this).scrollTop() >= 100) {
+            $('.header').addClass('stickytop');
+        } else {
+            $('.header').removeClass('stickytop');
+        }
+    });
+});
     if(window.screen.width >=767) {
     if ($('.body-first-screen-sl').length > 0) {
         let sl = document.querySelector('.body-first-screen-sl');

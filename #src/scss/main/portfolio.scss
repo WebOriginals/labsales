@@ -14,7 +14,8 @@
   left: 0;
   width: 100%;
   display: flex;
-  z-index: 2;
+  justify-content: space-between;
+  z-index: 12;
   align-items: center;
   padding: 0 15px;
   @include mq('desktop-wide') {
@@ -33,7 +34,7 @@
 }
 
 .portfolio-slide{
-  height: 40vh;
+  //height: 40vh;
 
 
   .portfolio-slide__image{
@@ -45,9 +46,16 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
+  //@include mq('desktop') {
+  //  height: 90vh;
+  //}
+}
+.height-content-sl{
+  height: 40vh;
+  padding: 0 15px;
   @include mq('desktop') {
-    height: 90vh;
-  }
+      height: 90vh;
+    }
 }
 
 .portfolio-slide__tipe-site{
@@ -58,9 +66,21 @@
 }
 
 .portfolio-slide__text-bottom{
-  z-index: 2;
+
   color: $color_1;
-  margin-right: auto;
+  position: absolute;
+  bottom: 50px;
+  left: 100px;
+  width: 50%;
+  z-index: 12;
+
+  @include mq('desktop-wide') {
+    width: 80%;
+    bottom: 130px;
+    padding: 0 0;
+    left: 100px;
+  }
+
 
   .portfolio-slide__name-project{
     @include adaptiv-font(24,14);

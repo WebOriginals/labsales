@@ -19,6 +19,7 @@ $( document ).ready(function() {
 
 
     @@include('files/menu.js')
+    @@include('files/header-fix.js')
     @@include('files/animation.js')
     @@include('files/delete-video.js')
     @@include('files/animation-inputs.js')

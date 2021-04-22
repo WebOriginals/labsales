@@ -15,6 +15,8 @@ $( document ).ready(function() {
     @@include('files/sliders/pageMain-firstScreen.js')
     @@include('files/sliders/pageMain-portfolio.js')
     @@include('files/sliders/pageMain-we-this.js')
+    @@include('files/sliders/pageCase-project.js')
+    @@include('files/sliders/pageCase-reviews.js')
     // end sliders
 
 

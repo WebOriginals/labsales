@@ -26,6 +26,7 @@ $color_2: #333;
 $color_3: #E53935;
 $color_4: rgba(229, 57, 53, 0.3);
 $color_5: #90A4AE;
+$color_6: #37474F;
 
 $link-img: '';
 
@@ -42,9 +43,11 @@ $md4: 479.98;
 //<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
 @import "_defuld/null";
 body {
-	@include adaptiv-font(16,14);
+	@include adaptiv-font(18,16);
 	font-weight: 300;
 	color: #000;
+	letter-spacing: 0.09em;
+	line-height: 1.5;
 	&._lock {
 		overflow: hidden;
 	}
@@ -69,9 +72,11 @@ body {
 	margin: 0 auto;
 	@media (max-width: $md1+px) {
 		max-width: 970px;
+
 	}
 	@media (max-width: $md2+px) {
 		max-width: 750px;
+		padding: 0 20px;
 	}
 	@media (max-width: $md3+px) {
 		max-width: none;
@@ -90,10 +95,13 @@ body {
 //<ОСНОВНОЙ БЛОК>====================================================================================================
 .page {
 	flex: 1 1 auto;
-	//padding-top: 60px;
-	//@include mq('desktop') {
-	//	padding-top: 140px;
-	//}
+	padding-top: 60px;
+	@include mq('desktop') {
+		padding-top: 140px;
+	}
+	&.main{
+		padding-top: 0 !important;
+	}
 }
 //===================================================================================================================================
 
@@ -104,13 +112,14 @@ body {
 
 
 .title{
-	@include adaptiv-font(36,24);
-	font-weight: 400;
+	@include adaptiv-font(26,20);
+	font-weight: 800;
+	text-transform: uppercase;
 }
 
 .title-h3{
 	@include adaptiv-font(20,18);
-	font-weight: 600;
+	font-weight: 500;
 	@include maq('tablet-wide') {
 		text-align: center;
 	}
@@ -167,4 +176,11 @@ body {
 @import "main/portfolio";
 @import "main/we-this-sl";
 @import "main/modal-presentation";
+
+//case
+@import "case/case-top";
+@import "case/description";
+@import "case/customers";
+@import "case/project";
+@import "case/reviews";
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================

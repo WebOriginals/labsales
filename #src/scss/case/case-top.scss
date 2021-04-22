@@ -1,0 +1,15 @@
+.sec-case-top{
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.case-top__title{
+  @include adaptiv-font(36,24);
+  padding: 30% 0 50px;
+  font-weight: bold;
+  color: $color_1;
+  @include mq('2.5K') {
+    padding: 50% 0 50px;
+  }
+}

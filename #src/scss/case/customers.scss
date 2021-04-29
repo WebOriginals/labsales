@@ -1,0 +1,27 @@
+.ces-customers{
+padding: 45px 0;
+  @include mq('tablet-wide') {
+    padding: 34px 0 60px;
+  }
+}
+
+.customers__title{
+@include adaptiv-margin-bottom(70,40);
+}
+
+.body-customers{
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: 1fr 1fr;
+  @include mq('tablet') {
+    grid-template-columns: 1fr 1fr 1fr ;
+  }
+  @include mq('tablet-wide') {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+.customers-el{
+  img{
+    max-width: 100%;
+  }
+}

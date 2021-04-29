@@ -17,19 +17,17 @@
 .main-container{
   height: 50px;
   min-width: 0;
-  transform: translateX(70px) translateY(-43px);
+  transform: translateX(75px) translateY(-54px);
 
   @include mq('desktop') {
-    transform: translateX(70px) translateY(-45px);
+    transform: translateX(75px) translateY(-56px);
   }
-  @include mq('desktop-wide') {
-    transform: translateX(70px) translateY(-47px);
-  }
+
   @include mq('2.5K') {
-    transform: translateX(80px) translateY(-50px);
+    transform: translateX(80px) translateY(-58px);
   }
   @include mq('3K') {
-    transform: translateX(80px) translateY(-53px);
+    transform: translateX(85px) translateY(-61px);
   }
 }
 .description-container{

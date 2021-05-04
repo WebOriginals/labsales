@@ -3,11 +3,22 @@
   padding: 45px 0 90px;
   @include mq('tablet-wide') {
     padding: 60px 0 130px;
+    background: $color_1;
   }
 }
 
 .project__title{
   @include adaptiv-margin-bottom(70,40);
+  @include mq('tablet-wide') {
+    transform: translateX(-550px);
+    transition: 1s;
+    opacity: 0;
+
+    &._active{
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
 }
 
 .project-slide{

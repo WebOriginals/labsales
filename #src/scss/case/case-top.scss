@@ -2,6 +2,7 @@
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
+
 }
 
 .case-top__title{
@@ -12,4 +13,12 @@
   @include mq('2.5K') {
     padding: 50% 0 50px;
   }
+  @include mq('tablet-wide') {
+    opacity: 0;
+    transition: 1s;
+    &._active{
+      opacity: 1;
+    }
+  }
+
 }

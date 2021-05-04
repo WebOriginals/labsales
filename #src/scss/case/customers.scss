@@ -2,14 +2,26 @@
 padding: 45px 0;
   @include mq('tablet-wide') {
     padding: 34px 0 60px;
+    background: $color_1;
   }
 }
 
 .customers__title{
 @include adaptiv-margin-bottom(70,40);
+  @include mq('tablet-wide') {
+    transform: translateX(-550px);
+    transition: 1s;
+    opacity: 0;
+
+    &._active{
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
 }
 
 .body-customers{
+  overflow: hidden;
   display: grid;
   grid-gap: 30px;
   grid-template-columns: 1fr 1fr;
@@ -24,4 +36,30 @@ padding: 45px 0;
   img{
     max-width: 100%;
   }
+}
+
+.customers-el{
+  @include mq('tablet-wide') {
+    opacity: 0;
+    transition: all 0.3s ease 0s;
+    transform: translate(-520%, 0px);
+    &._active {
+      transform: translate(0px, 0px);
+
+        @for $var from 1 to 10 {
+          $delay: $var * 0.4;
+          &:nth-child(#{$var}) {
+            @if $var==1 {
+              opacity: 1;
+              transition: transform 0.8s ease 0s;
+            } @else {
+              opacity: 1;
+              transition: transform 0.8s ease #{$delay + s};
+            }
+          }
+        }
+
+    }
+  }
+
 }

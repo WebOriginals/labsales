@@ -1957,9 +1957,6 @@ body._touch .menu__arrow {
   grid-gap: 30px;
   -ms-grid-columns: 1fr;
   grid-template-columns: 1fr;
-  -webkit-transition: 1.2s;
-  -o-transition: 1.2s;
-  transition: 1.2s;
 }
 
 .case-description__text h2 {
@@ -1989,6 +1986,42 @@ body._touch .menu__arrow {
   width: 140px;
   height: 140px;
   background-image: url("./../../img/icons/quotes.svg");
+}
+
+@-webkit-keyframes show {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(150px);
+            transform: translateY(150px);
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(150px);
+            transform: translateY(150px);
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
 }
 
 .ces-customers {
@@ -2419,18 +2452,32 @@ body._touch .menu__arrow {
     background: #FFFFFF;
   }
 
-  .body-case-description {
+  .case-description__text {
+    -webkit-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
     -webkit-transform: translateY(150px);
         -ms-transform: translateY(150px);
             transform: translateY(150px);
     opacity: 0;
   }
 
-  .body-case-description._active {
+  .case-description__text._active {
     -webkit-transform: translateY(0);
         -ms-transform: translateY(0);
             transform: translateY(0);
     opacity: 1;
+  }
+
+  .case-description__quote {
+    opacity: 0;
+  }
+
+  .case-description__quote._active {
+    -webkit-animation: show 1s ease .5s;
+            animation: show 1s ease .5s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
   }
 
   .ces-customers {
@@ -2462,9 +2509,6 @@ body._touch .menu__arrow {
 
   .customers-el {
     opacity: 0;
-    -webkit-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
     -webkit-transform: translate(-520%, 0px);
         -ms-transform: translate(-520%, 0px);
             transform: translate(-520%, 0px);
@@ -2585,6 +2629,23 @@ body._touch .menu__arrow {
 
   .sec-reviews {
     padding: 60px 0 100px;
+  }
+
+  .reviews__title {
+    -webkit-transform: translateX(-550px);
+        -ms-transform: translateX(-550px);
+            transform: translateX(-550px);
+    -webkit-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+    opacity: 0;
+  }
+
+  .reviews__title._active {
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
   }
 
   .arrows-reviews {

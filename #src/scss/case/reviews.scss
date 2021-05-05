@@ -9,6 +9,18 @@
 
 .reviews__title{
   @include adaptiv-margin-bottom(70,40);
+
+  @include mq('tablet-wide') {
+    transform: translateX(-550px);
+    transition: 1s;
+    opacity: 0;
+    
+
+    &._active{
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
 }
 .arrows-reviews{
   display: flex;

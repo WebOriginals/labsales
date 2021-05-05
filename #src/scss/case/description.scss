@@ -11,20 +11,12 @@
   display: grid;
   grid-gap: 30px;
   grid-template-columns: 1fr;
-  transition: 1.2s;
+
   @include mq('tablet') {
     grid-template-columns: 1fr 1fr;
     grid-gap: 50px;
   }
-  @include mq('tablet-wide') {
-    transform: translateY(150px);
-    opacity: 0;
 
-    &._active{
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
 }
 .case-description__text{
   h2{
@@ -33,6 +25,16 @@
   }
   p{
     margin-bottom: 20px;
+  }
+  @include mq('tablet-wide') {
+    transition: 1s;
+    transform: translateY(150px);
+    opacity: 0;
+
+    &._active{
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
 }
 
@@ -56,5 +58,33 @@
     } @else {
       background-image: url($link-img + "/img/icons/quotes.svg");
     }
+  }
+}
+
+.case-description__quote{
+  @include mq('tablet-wide') {
+    opacity: 0;
+
+    &._active{
+      animation: show 1s ease .5s;
+      animation-fill-mode: forwards;
+    }
+  }
+
+}
+
+@keyframes show {
+  0%{
+    opacity: 0;
+    transform: translateY(150px);
+  }
+
+  50% {
+   opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
   }
 }
